@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Nashville Housing Data Cleaning | Hiten Shah</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+</head>
+
+<body class="is-preload">
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+            <a href="index.html" class="logo">
+                <span class="symbol">
+                    <img src="images/logo.svg" alt="" />
+                </span>
+                <span class="title">Hiten Shah</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Menu -->
+    <nav id="menu">
+        <h2>Menu</h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="vendor-performance.html">
+                    Vendor Performance Analysis
+                </a>
+            </li>
+
+            <li>
+                <a href="data-professional-survey.html">
+                    Data Professional Survey
+                </a>
+            </li>
+
+            <li>
+                <a href="covid-19-data-exploration.html">
+                    COVID-19 Data Exploration
+                </a>
+            </li>
+
+            <li>
+                <a href="movie-industry-eda.html">
+                    Movie Industry EDA
+                </a>
+            </li>
+
+            <li>
+                <a href="bike-sales-dashboard.html">
+                    Bike Sales Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="nashville-housing-data-cleaning.html">
+                    Nashville Housing Data Cleaning
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+
+            <header>
+
+                <h1>NASHVILLE HOUSING DATA CLEANING</h1>
+
+                <p>
+                    A SQL Server data cleaning project transforming a
+                    56,000+ row Nashville housing dataset into a clean,
+                    consistent and analysis-ready dataset.
+                </p>
+
+            </header>
+
+
+            <h2>PROJECT OVERVIEW</h2>
+
+            <p>
+                This project takes a real-world Nashville, Tennessee property
+                sales dataset and cleans it using T-SQL in SQL Server.
+                The objective is to standardize inconsistent data, handle
+                missing values, split combined fields, remove duplicate
+                records and prepare the dataset for further analysis.
+            </p>
+
+
+            <h2>KEY ANALYSIS</h2>
+
+            <p>
+                The project focuses on practical data-cleaning techniques
+                required when working with messy real-world datasets,
+                including relationship-based missing-value handling,
+                address transformation, categorical standardization and
+                business-rule-based duplicate detection.
+            </p>
+
+
+            <h2>TOOLS &amp; TECHNOLOGIES</h2>
+
+            <p>
+                SQL Server 2025 &nbsp; | &nbsp;
+                SQL Server Management Studio (SSMS) &nbsp; | &nbsp;
+                T-SQL
+            </p>
+
+
+            <h2>DATA CLEANING TECHNIQUES</h2>
+
+            <ul>
+
+                <li>
+                    <strong>Date Standardization:</strong>
+                    Converted the original SaleDate datetime values into
+                    a clean date format.
+                </li>
+
+                <li>
+                    <strong>Missing Property Addresses:</strong>
+                    Used a self-join on ParcelID to populate missing
+                    PropertyAddress values from related records.
+                </li>
+
+                <li>
+                    <strong>Address Splitting:</strong>
+                    Split PropertyAddress into address and city fields
+                    and OwnerAddress into address, city and state fields.
+                </li>
+
+                <li>
+                    <strong>Categorical Standardization:</strong>
+                    Converted inconsistent Y/N and Yes/No values in
+                    SoldAsVacant into standardized Yes/No values.
+                </li>
+
+                <li>
+                    <strong>Duplicate Removal:</strong>
+                    Used ROW_NUMBER() with PARTITION BY to identify
+                    duplicate records according to business rules.
+                </li>
+
+                <li>
+                    <strong>Column Cleanup:</strong>
+                    Removed redundant original columns after creating
+                    cleaned replacement fields.
+                </li>
+
+            </ul>
+
+
+            <h2>KEY SQL TECHNIQUES</h2>
+
+            <p>
+                Self-Joins &nbsp; | &nbsp;
+                ISNULL() &nbsp; | &nbsp;
+                CASE WHEN &nbsp; | &nbsp;
+                SUBSTRING() &nbsp; | &nbsp;
+                CHARINDEX() &nbsp; | &nbsp;
+                PARSENAME() &nbsp; | &nbsp;
+                CTEs &nbsp; | &nbsp;
+                ROW_NUMBER() &nbsp; | &nbsp;
+                PARTITION BY &nbsp; | &nbsp;
+                ALTER TABLE
+            </p>
+
+
+            <h2>KEY LEARNINGS</h2>
+
+            <p>
+                Real-world datasets rarely import cleanly. This project
+                demonstrates how SQL can be used not only for querying data,
+                but also for systematically transforming messy operational
+                data into a reliable foundation for analysis and reporting.
+            </p>
+
+            <p>
+                A major focus was defining duplicates using business logic
+                rather than relying only on technical identifiers. The
+                project also demonstrates how self-joins can be used to
+                recover missing information from related records.
+            </p>
+
+
+            <h2>PROJECT REPOSITORY</h2>
+
+            <p>
+                The complete commented T-SQL script and project documentation
+                are available on GitHub.
+            </p>
+
+            <ul class="actions">
+
+                <li>
+                    <a href="https://github.com/hiten-shah-analytics/NashvilleHousingDataCleaning"
+                       class="button primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        VIEW PROJECT ON GITHUB
+
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+
+        <section>
+            <h2>GET IN TOUCH</h2>
+
+            <p>
+                Interested in working together or discussing a data analytics opportunity?
+                Feel free to reach out.
+            </p>
+
+            <ul class="actions">
+                <li>
+                    <a href="mailto:hiten1919@gmail.com" class="button primary">
+                        EMAIL ME
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>FOLLOW</h2>
+
+            <ul class="icons">
+
+                <li>
+                    <a href="https://github.com/hiten-shah-analytics"
+                       class="icon brands style2 fa-github"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="label">GitHub</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.linkedin.com/in/hiten-shah-analyst963/"
+                       class="icon brands style2 fa-linkedin"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <span class="label">LinkedIn</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="mailto:hiten1919@gmail.com"
+                       class="icon solid style2 fa-envelope">
+                        <span class="label">Email</span>
+                    </a>
+                </li>
+
+            </ul>
+        </section>
+
+        <ul class="copyright">
+            <li>&copy; 2026 Hiten Shah. All rights reserved.</li>
+            <li>Portfolio of Hiten Shah</li>
+        </ul>
+
+    </div>
+</footer>
+
+</div>
+
+
+<!-- Scripts -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
